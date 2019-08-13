@@ -5,7 +5,7 @@
 body {
     margin: 0;
     text-align: center;
-    font-family: system-ui, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: 'Open Sans', sans-serif;
     color: #fff;
 }
 
@@ -72,7 +72,6 @@ span#name {
 .nav-links a {
     padding: 14px 20px;
     text-decoration: none;
-    font-weight: bold;
     color: #ffffff;
 }
 
@@ -80,6 +79,7 @@ span#name {
     color: #282828;
     height: 500px;
     background: #ffffff;
+    padding: 50px 0 50px 0;
 }
 
 #portfolio {
@@ -97,6 +97,24 @@ span#name {
     top: 0;
     left: 0;
     animation: slideDown 0.3s;
+}
+
+.header {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.self {
+    max-width: 800px;
+}
+
+.self img {
+    margin-bottom: 30px;
+}
+
+.bio {
+    text-align: justify;
 }
 
 @keyframes slideDown {
