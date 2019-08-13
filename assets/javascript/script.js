@@ -54,7 +54,7 @@ var particles = {
         },
         move: {
             enable: true,
-            speed: 6,
+            speed: 4,
             direction: "none",
             random: false,
             straight: false,
@@ -114,3 +114,19 @@ var jsonUri = "data:text/plain;base64," + window.btoa(JSON.stringify(particles))
 particlesJS.load("particles-js", jsonUri, function() {
     console.log("callback - particles.js config loaded");
 });
+
+var navPos = $(".nav").position().top;
+console.log(navPos);
+
+$(window).on('scroll', function() {
+
+    var here = $(window).scrollTop();
+
+    if( here > navPos + 53 && !($(".nav").hasClass("fixed")) ) {
+        $(".nav").toggleClass("fixed");
+    } else if ( here < navPos && $(".nav").hasClass("fixed")) {
+        $(".nav").toggleClass("fixed");
+    }
+    console.log(here);
+
+})
