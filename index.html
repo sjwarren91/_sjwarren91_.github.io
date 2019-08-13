@@ -1,40 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <title>Samuel Warren</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <h1>Student Bio</h1>
-    </header>
-    <div class="container">
-        <section id="main-bio">
-            <h2>Samuel Warren</h2>
-            <img id="bio-image"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVy96cIRcKgayy5kAI7ix-zHj5P_lUo8VcWbvQxa2quNCcwYb3">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ligula ullamcorper malesuada proin libero nunc consequat. Morbi tristique senectus
-                et netus. Morbi tristique senectus et netus et malesuada fames ac turpis. Auctor urna nunc id cursus
-                metus aliquam eleifend mi. Mi bibendum neque egestas congue quisque egestas diam. In mollis nunc sed id
-                semper risus. Amet facilisis magna etiam tempor. Molestie a iaculis at erat pellentesque. Hendrerit
-                dolor magna eget est. Purus sit amet volutpat consequat mauris nunc. Pellentesque id nibh tortor id
-                aliquet lectus proin nibh nisl. Risus quis varius quam quisque id diam vel. Arcu vitae elementum
-                curabitur vitae nunc sed velit dignissim.</p>
+    <div class="content">
+
+        <section id="jumbotron" class="flex">
+
+            <div id="particles-js"></div>
+
+            <div class="flex">
+                <div class="info">
+                    Hi, my name is
+                    <span id="name">Samuel Warren</span>.
+                    <br>
+                    I am a full-stack developer.
+                </div>
+            </div>
+
+            <div class="nav">
+                <div class="nav-links flex row">
+                    <a href="">Home</a>
+                    <a href="">About Me</a>
+                    <a href="">Portfolio</a>
+                    <a href="">Contact</a>
+                </div>
+
+            </div>
+
         </section>
 
-        <section id="contact-info">
-            <h2>Contact Info</h2>
-            <ul>
-                <li><strong>Email: </strong> <a href="">sjwarren91@gmail.com</a></li>
-                <li><strong>Github: </strong><a href="https://github.com/sjwarren91" target="_blank">Samuel Warren</a>
-                </li>
-                <li><strong>Portfolio: </strong> <a href="">Coming Soon</a></li>
-            </ul>
+        <section id="about">
+
+            <div class="container flex">
+
+                <div class="header">ABOUT ME</div>
+
+                <div class="self">
+                    <img src="https://picsum.photos/id/532/300/200" alt="">
+                    <div class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare elementum
+                        tempus. Nunc fermentum, eros hendrerit tristique pretium, nibh dolor fermentum nisl, at viverra
+                        mi est eu purus. Nam varius velit ac nulla pharetra molestie. Etiam eleifend vel arcu ut
+                        lobortis. Vivamus sed mattis nunc. Donec nec turpis eget nibh scelerisque accumsan non quis
+                        justo. Vivamus aliquam ut turpis et faucibus. Sed imperdiet vulputate est. Nunc consequat, eros
+                        nec sollicitudin molestie, odio dui elementum odio, ut scelerisque augue arcu eget dui. Nulla
+                        tempor dignissim tristique. Donec venenatis tincidunt diam, non posuere arcu aliquam a. Vivamus
+                        quis tristique erat. Curabitur tincidunt ullamcorper turpis nec hendrerit. Etiam et diam at
+                        massa aliquet mollis.
+                    </div>
+                </div>
+
+            </div>
         </section>
+
+        <section id="portfolio">
+
+        </section>
+
+        <section id="contact"></section>
+
+
+        <script src="./assets/javascript/script.js"></script>
+
     </div>
-
 </body>
 
 </html>
