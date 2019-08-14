@@ -48,8 +48,8 @@ var particles = {
         line_linked: {
             enable: true,
             distance: 160,
-            color: "#ffffff",
-            opacity: 0.60,
+            color: "#c30740",
+            opacity: 0.9,
             width: 1
         },
         move: {

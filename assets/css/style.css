@@ -21,7 +21,8 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-color: #0c0032;
+    background-color: #0b0c10;
+    /* background-color: #0c0032; */
     position: absolute;
     top: 0;
     left: 0;
@@ -39,7 +40,7 @@ body {
 }
 
 span#name {
-    color: #66fcf1;
+    color: #c30740;
 }
 
 .nav {
@@ -49,10 +50,10 @@ span#name {
     bottom: -50px;
     height: 50px;
     width: 100%;
-    background: #282828;
+    background: #1f2833;
     z-index: 99;
     overflow: hidden;
-    border-bottom: 3px solid #66fcf1;
+    border-bottom: 3px solid #c30740;
 }
 
 .row {
@@ -105,7 +106,7 @@ span#name {
     margin-bottom: 30px;
 }
 
-.bio-header {
+.section-header {
     font-size: 18pt;
     font-weight: 700;
 }
