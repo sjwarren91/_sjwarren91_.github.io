@@ -7,6 +7,7 @@ body {
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     color: #fff;
+    line-height: 18pt;
 }
 
 .flex {
@@ -77,9 +78,8 @@ span#name {
 
 #about {
     color: #282828;
-    height: 500px;
     background: #ffffff;
-    padding: 50px 0 50px 0;
+    padding: 50px 0 100px 0;
 }
 
 #portfolio {
@@ -100,22 +100,47 @@ span#name {
 }
 
 .header {
-    font-size: 32px;
+    font-size: 30pt;
     font-weight: 700;
     margin-bottom: 30px;
 }
 
+.bio-header {
+    font-size: 18pt;
+    font-weight: 700;
+}
+
 .self {
-    max-width: 800px;
+    width: 100%;
+    
 }
 
 .self img {
-    margin-bottom: 30px;
+    margin: 0 30px 0 0;
+    
 }
 
 .bio {
-    text-align: justify;
+    margin: 0 0 0 30px;
 }
+
+.bio p{
+    text-align: justify;
+    width: 500px;
+}
+
+.fab {
+    font-size: 100px;
+}
+
+.icon-wrap {
+    padding: 25px;
+}
+
+.icon-wrap.bio-header {
+    margin: 25px 0 25px 0;
+}
+
 
 @keyframes slideDown {
     0% {
