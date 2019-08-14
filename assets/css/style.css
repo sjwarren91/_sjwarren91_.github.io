@@ -85,7 +85,6 @@ span#name {
 }
 
 #portfolio {
-    height: 500px;
     background: #F5F5F5
 }
 
@@ -147,13 +146,22 @@ span#name {
     padding: 25px;
 }
 
-.icon-wrap.bio-header {
-    margin: 25px 0 25px 0;
+.icon-wrap .section-header {
+    margin: 0 0 25px 0;
 }
 
 .highlight {
     color: #c30740;
 }
+
+.task {
+    height: 260px;
+}
+
+.projects img {
+    width: 400px;
+}
+
 
 @keyframes slideDown {
     0% {
