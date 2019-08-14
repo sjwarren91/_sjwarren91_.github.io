@@ -77,8 +77,9 @@ span#name {
     color: #ffffff;
 }
 
-#about {
-    color: #282828;
+#about,
+#portfolio {
+    color: #1f2833;
     background: #ffffff;
     padding: 50px 0 100px 0;
 }
@@ -103,7 +104,14 @@ span#name {
 .header {
     font-size: 30pt;
     font-weight: 700;
-    margin-bottom: 30px;
+}
+
+.underline {
+    background: #1f2833;
+    height: 4px;
+    width: 100px;
+    margin: 20px 0 50px 0;
+    border-radius: 2px;
 }
 
 .section-header {
@@ -113,7 +121,7 @@ span#name {
 
 .self {
     width: 100%;
-    
+    margin-bottom: 50px;
 }
 
 .self img {
@@ -126,12 +134,13 @@ span#name {
 }
 
 .bio p{
-    text-align: justify;
+    text-align: center;
     width: 500px;
 }
 
 .fab {
     font-size: 100px;
+    padding-bottom: 25px;
 }
 
 .icon-wrap {
@@ -142,6 +151,9 @@ span#name {
     margin: 25px 0 25px 0;
 }
 
+.highlight {
+    color: #c30740;
+}
 
 @keyframes slideDown {
     0% {
