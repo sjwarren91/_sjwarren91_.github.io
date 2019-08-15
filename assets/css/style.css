@@ -40,7 +40,8 @@ body {
 }
 
 span#name {
-    color: #c30740;
+    /* color: #c30740; */
+    color: #86c232;
 }
 
 .nav {
@@ -53,7 +54,7 @@ span#name {
     background: #1f2833;
     z-index: 99;
     overflow: hidden;
-    border-bottom: 3px solid #c30740;
+    border-bottom: 3px solid #86c232;
 }
 
 .row {
@@ -151,7 +152,7 @@ span#name {
 }
 
 .highlight {
-    color: #c30740;
+    color: #86c232;
 }
 
 .task {

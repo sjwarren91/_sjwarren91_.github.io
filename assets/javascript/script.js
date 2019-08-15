@@ -48,7 +48,7 @@ var particles = {
         line_linked: {
             enable: true,
             distance: 160,
-            color: "#c30740",
+            color: "#86c232",
             opacity: 0.9,
             width: 1
         },
