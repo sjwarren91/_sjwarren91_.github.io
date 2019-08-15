@@ -79,7 +79,8 @@ span#name {
 }
 
 #about,
-#portfolio {
+#portfolio,
+#contact {
     color: #1f2833;
     background: #ffffff;
     padding: 50px 0 100px 0;
