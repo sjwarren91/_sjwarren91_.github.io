@@ -116,17 +116,37 @@ particlesJS.load("particles-js", jsonUri, function() {
 });
 
 var navPos = $(".nav").position().top;
-console.log(navPos);
 
-$(window).on('scroll', function() {
-
+$(window).on("scroll", function() {
     var here = $(window).scrollTop();
 
-    if( here > navPos + 53 && !($(".nav").hasClass("fixed")) ) {
+    if (here > navPos + 53 && !$(".nav").hasClass("fixed")) {
         $(".nav").toggleClass("fixed");
-    } else if ( here < navPos && $(".nav").hasClass("fixed")) {
+    } else if (here < navPos && $(".nav").hasClass("fixed")) {
         $(".nav").toggleClass("fixed");
     }
-    console.log(here);
+});
 
-})
+var options = {
+    rootmargin: "20px",
+    threshold: 1.0
+};
+
+var callback = function(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            var animate = entry.target.dataset.animation;
+            console.log(animate);
+            entry.target.classList.add(animate);
+            console.log(entry);
+        }
+    });
+};
+
+var observer = new IntersectionObserver(callback, options);
+
+var targets = document.querySelectorAll(".intersect");
+
+targets.forEach(function(target) {
+    observer.observe(target);
+});

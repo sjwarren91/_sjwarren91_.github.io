@@ -222,6 +222,8 @@ textarea {
     font-family: 'Open Sans', sans-serif;
 }
 
+textarea {resize: none;}
+
 .text-label {
     display: flex;
     flex-direction: column;
@@ -268,8 +270,30 @@ button {
     margin-left: 2px;
 }
 
+.slide-right {
+    animation-name: slideRight;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.3s;
+}
 
+.slide-left {
+    animation-name: slideLeft;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.3s;
+}
 
+.slide-up {
+    animation-name: slideUp;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.3s;
+}
+
+.intersect {
+    opacity: 0;
+}
 
 @keyframes slideDown {
     0% {
@@ -280,3 +304,40 @@ button {
         transform: translateY(0);
     }
 }
+
+@keyframes slideRight {
+    0%{
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(300px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideUp {
+    0%{
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
