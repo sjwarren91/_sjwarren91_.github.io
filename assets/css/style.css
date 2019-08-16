@@ -270,27 +270,6 @@ button {
     margin-left: 2px;
 }
 
-.slide-right {
-    animation-name: slideRight;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-delay: 0.3s;
-}
-
-.slide-left {
-    animation-name: slideLeft;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-delay: 0.3s;
-}
-
-.slide-up {
-    animation-name: slideUp;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-delay: 0.3s;
-}
-
 .intersect {
     opacity: 0;
 }

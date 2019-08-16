@@ -136,9 +136,17 @@ var callback = function(entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             var animate = entry.target.dataset.animation;
+            var delay = entry.target.dataset.delay;
+            console.log(delay);
             console.log(animate);
-            entry.target.classList.add(animate);
-            console.log(entry);
+            entry.target.style.animation = animate +" 0.75s ease"
+
+            if(delay){
+                entry.target.style.animationDelay = delay;
+            }
+            
+            
+            entry.target.style.animationFillMode = "forwards"
         }
     });
 };
