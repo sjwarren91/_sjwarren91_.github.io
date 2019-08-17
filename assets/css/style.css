@@ -332,3 +332,57 @@ button {
     }
 }
 
+@media screen and (max-width: 768px){
+    .info {
+        font-size: 24pt;
+    }
+
+    .self img {
+        margin: 0 0 30px 0;
+    }
+
+    .self {
+        width: 80%;
+    }
+
+    .bio {
+        margin: 0;
+    }
+    
+    .bio p {
+        margin: 0;
+        width: 300px;
+    }
+
+    .section-header {
+        margin-bottom: 25px;
+    }
+
+    .contact-wrap {
+        width: 90%;
+    }
+
+    .contact-title img {
+        width: 100%;
+    }
+
+    .contact-form {
+        padding: 20px 40px 20px 40px; 
+    }
+
+    #contact {
+        padding: 50px 0 50px 0;
+    }
+}
+
+@media screen and (max-width: 414px){
+    .task {
+        height: 221px;
+        width: 340px;
+    }
+
+    .task img {
+        height: 221px;
+        width: 340px;
+    }
+}
