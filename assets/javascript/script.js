@@ -279,6 +279,16 @@ function debounce(func, wait, immediate) {
   };
 
 
+$(".task").hover(function(){
+    $(this).children("img").addClass("fade");
+    $(this).children(".section-header").addClass("move-in");
+    $(this).children("a").addClass("move-down");
+}, function(){
+    $(this).children().removeClass('fade');
+    $(this).children().removeClass('move-in');
+    $(this).children().removeClass("move-down");
+})
+
 $(document).ready(function(){
     setDelays();
 });
