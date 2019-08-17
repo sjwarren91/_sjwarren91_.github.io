@@ -284,8 +284,15 @@ button {
     padding: 30px 0 20px 0;
 }
 
-.icon-wrap {
-    padding: 0 20px 0 20px;
+.socials-icon-wrap {
+    padding: 15px;
+    border-radius: 50%;
+    background-color: #1f2833;
+    transition: all 0.3s ease-in;
+}
+
+.socials-icon-wrap:hover{
+    background-color: #86c232;
 }
 
 .menu-icon {

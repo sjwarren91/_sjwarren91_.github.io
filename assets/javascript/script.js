@@ -1,3 +1,4 @@
+//object for the particle.js information
 var particles = {
     particles: {
         number: {
@@ -109,14 +110,20 @@ var particles = {
     retina_detect: true
 };
 
+//parseing the object to correct format to be called by the particlesJS library
 var jsonUri = "data:text/plain;base64," + window.btoa(JSON.stringify(particles));
 
+//loading the particle animation
 particlesJS.load("particles-js", jsonUri, function() {
     console.log("callback - particles.js config loaded");
 });
 
+//global variable to fin the top position of the nav bar
 var navPos = $(".nav").position().top;
 
+//add scroll event handlers here
+//fixed navbar when passed the jumbotron
+//highlights nav links when in relevant section
 $(window).on("scroll", function() {
     var here = $(window).scrollTop();
     var header = here + 50;
@@ -134,16 +141,20 @@ $(window).on("scroll", function() {
 
 });
 
+//function to highlight the links
 function highlight(id){
     $(".nav-links a").removeClass('highlight')
     $(".nav-links").find('[data-dest="' + id + '"]').addClass("highlight");
 }
 
+//options for our IntersectionObserver
 var options = {
     rootmargin: "20px",
     threshold: 1.0
 };
 
+//callback function for our intersection observer that applys animations to divs
+//when they are 100% in the viewport
 var callback = function(entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -154,8 +165,7 @@ var callback = function(entries) {
             if(delay){
                 entry.target.style.animationDelay = delay;
             }
-            
-            
+
             entry.target.style.animationFillMode = "forwards"
         }
     });
@@ -169,11 +179,13 @@ targets.forEach(function(target) {
     observer.observe(target);
 });
 
-
+//click event for the menu icon to toggle the nav links
 $(".menu-icon").on("click", function(){
     $(".nav-links").toggleClass("toggle-menu");
 })
 
+//when link is clicked, closes the menu and highlights the relevant section
+//scroll animation to smoothly transition to the relevant section
 $(".link").on("click", function(event){
     event.preventDefault();
     var link = $(this).attr("data-dest");
@@ -186,6 +198,90 @@ $(".link").on("click", function(event){
     }, 500);
 });
 
+//required delays for portolio image animations
+var delays = {
+    small: ["0s", "0s", "0s", "0s", "0s", "0s"],
+    medium: ["0s", "0.3s", "0s", "0.3s", "0s", "0.3s"],
+    large: ["0s", "0.3s", "0.6s", "0s", "0.3s", "0.6s"],
+}
+
+//function to determine what animation delay the image needs 
+//based on the screen size
+function setDelays(){
+
+    var width = $(window).width();
+    var delay;
+    if(width > 1200) {
+        delay = delays.large;
+    } else if (width > 816 && width <= 1200) {
+        delay = delays.medium;
+    } else {
+        delay = delays.small;
+    }
+
+    console.log(delay);
+    
+    var images = $(".task");
+    images.each(function(index){
+        $(this).attr("data-delay", delay[index])
+    })
+    
+}
+
+//event that handles animation delays of the portfolio images
+//if the window happens to be resized before they are activated
+$(window).on('resize', debounce(function(){
+    
+    setDelays();
+
+}, 250));
+
+//generic debounce function so resize isnt called 10000000x
+function debounce(func, wait, immediate) {
+    var timeout;
+  
+    // This is the function that is actually executed when
+    // the DOM event is triggered.
+    return function executedFunction() {
+      // Store the context of this and any
+      // parameters passed to executedFunction
+      var context = this;
+      var args = arguments;
+          
+      // The function to be called after 
+      // the debounce time has elapsed
+      var later = function() {
+        // null timeout to indicate the debounce ended
+        timeout = null;
+          
+        // Call function now if you did not on the leading end
+        if (!immediate) func.apply(context, args);
+      };
+  
+      // Determine if you should call the function
+      // on the leading or trail end
+      var callNow = immediate && !timeout;
+      
+      // This will reset the waiting every function execution.
+      // This is the step that prevents the function from
+      // being executed because it will never reach the 
+      // inside of the previous setTimeout  
+      clearTimeout(timeout);
+      
+      // Restart the debounce waiting period.
+      // setTimeout returns a truthy value (it differs in web vs node)
+      timeout = setTimeout(later, wait);
+      
+      // Call immediately if you're dong a leading
+      // end execution
+      if (callNow) func.apply(context, args);
+    };
+  };
+
+
+$(document).ready(function(){
+    setDelays();
+});
 
 
 
