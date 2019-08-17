@@ -109,6 +109,7 @@ span#name {
 .header {
     font-size: 30pt;
     font-weight: 700;
+    margin-top: 25px;
 }
 
 .underline {
@@ -158,7 +159,7 @@ span#name {
 }
 
 .highlight {
-    color: #86c232;
+    color: #86c232 !important;
 }
 
 .task {
@@ -369,10 +370,13 @@ button {
     .bio p {
         margin: 0;
         width: 70vw;
+        font-size: 12pt;
     }
 
     .section-header {
         margin-bottom: 25px;
+        font-size: 14pt;
+
     }
 
     .contact-wrap {
@@ -422,9 +426,11 @@ button {
     .toggle-menu {
         height: 220px;
     }
-    /* #jumbotron {
-        position: relative;
-    } */
+    
+    .header {
+        font-size: 26pt;
+        margin: 0;
+    }
 }
 
 @media screen and (max-width: 414px){

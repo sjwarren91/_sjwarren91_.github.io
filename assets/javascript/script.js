@@ -119,13 +119,26 @@ var navPos = $(".nav").position().top;
 
 $(window).on("scroll", function() {
     var here = $(window).scrollTop();
-
+    var header = here + 50;
     if (here > navPos + 53 && !$(".nav").hasClass("fixed")) {
         $(".nav").toggleClass("fixed");
     } else if (here < navPos && $(".nav").hasClass("fixed")) {
         $(".nav").toggleClass("fixed");
     }
+    console.log(header);
+    console.log($("#about").offset().top);
+    if (header > $("#jumbotron").offset().top){ highlight("#jumbotron")};
+    if (header > $("#about").offset().top){ highlight("#about")};
+    if (header > $("#portfolio").offset().top){ highlight("#portfolio")};
+    if (header > $("#contact").offset().top){ highlight("#contact")};
+
+
 });
+
+function highlight(id){
+    $(".nav-links a").removeClass('highlight')
+    $(".nav-links").find('[href="' + id + '"]').addClass("highlight");
+}
 
 var options = {
     rootmargin: "20px",
@@ -137,8 +150,6 @@ var callback = function(entries) {
         if (entry.isIntersecting) {
             var animate = entry.target.dataset.animation;
             var delay = entry.target.dataset.delay;
-            console.log(delay);
-            console.log(animate);
             entry.target.style.animation = animate +" 0.75s ease"
 
             if(delay){
@@ -163,3 +174,15 @@ targets.forEach(function(target) {
 $(".menu-icon").on("click", function(){
     $(".nav-links").toggleClass("toggle-menu");
 })
+
+$(".link").on("click", function(){
+    var link = $(this).attr("href");
+    $(".nav-links").removeClass("toggle-menu")
+    console.log(link);
+    $(".nav-links").find('[href="' + link + '"]').addClass('highlight');
+    $(".nav-links a").not($(this)).removeClass("highlight");
+})
+
+
+
+
