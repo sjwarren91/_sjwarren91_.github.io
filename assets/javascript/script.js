@@ -125,8 +125,7 @@ $(window).on("scroll", function() {
     } else if (here < navPos && $(".nav").hasClass("fixed")) {
         $(".nav").toggleClass("fixed");
     }
-    console.log(header);
-    console.log($("#about").offset().top);
+
     if (header > $("#jumbotron").offset().top){ highlight("#jumbotron")};
     if (header > $("#about").offset().top){ highlight("#about")};
     if (header > $("#portfolio").offset().top){ highlight("#portfolio")};
@@ -137,7 +136,7 @@ $(window).on("scroll", function() {
 
 function highlight(id){
     $(".nav-links a").removeClass('highlight')
-    $(".nav-links").find('[href="' + id + '"]').addClass("highlight");
+    $(".nav-links").find('[data-dest="' + id + '"]').addClass("highlight");
 }
 
 var options = {
@@ -175,13 +174,17 @@ $(".menu-icon").on("click", function(){
     $(".nav-links").toggleClass("toggle-menu");
 })
 
-$(".link").on("click", function(){
-    var link = $(this).attr("href");
+$(".link").on("click", function(event){
+    event.preventDefault();
+    var link = $(this).attr("data-dest");
     $(".nav-links").removeClass("toggle-menu")
-    console.log(link);
-    $(".nav-links").find('[href="' + link + '"]').addClass('highlight');
+    $(".nav-links").find('[dest="' + link + '"]').addClass('highlight');
     $(".nav-links a").not($(this)).removeClass("highlight");
-})
+
+    $("html, body").animate({
+        scrollTop: $(link).offset().top - 25
+    }, 500);
+});
 
 
 
