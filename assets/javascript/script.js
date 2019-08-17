@@ -158,3 +158,8 @@ var targets = document.querySelectorAll(".intersect");
 targets.forEach(function(target) {
     observer.observe(target);
 });
+
+
+$(".menu-icon").on("click", function(){
+    $(".nav-links").toggleClass("toggle-menu");
+})
