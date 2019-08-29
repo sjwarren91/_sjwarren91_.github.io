@@ -183,7 +183,6 @@ label {
 
 .fade {
     opacity: 0 !important;
-    
 }
 
 .projects .section-header {
@@ -194,17 +193,39 @@ label {
     transition: all 0.4s ease-in-out;
 }
 
-.projects a {
+.projects .portlink {
     position: absolute;
     bottom: 0px;
     color: #1f2833;
     opacity: 0;
     transition: all 0.4s ease-in-out;
     text-decoration: none;
-    padding: 10px 20px 10px 20px;
+    padding: 5px 20px 5px 20px;
     border: 2px solid #86c232;
     border-radius: 5px;
     font-weight: 400;
+}
+
+.projects .gitlink {
+    position: absolute;
+    bottom: 0px;
+    color: #1f2833;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    transition-delay: 0.3s;
+    text-decoration: none;
+    padding: 5px 20px 5px 20px;
+    border: 2px solid #86c232;
+    border-radius: 5px;
+    font-weight: 400;
+}
+
+.projects .gitimg {
+    width: 50px;
+    position: absolute;
+    opacity: 0;
+    bottom: -50px;
+    transition: all 0.4s ease-in-out;
 }
 
 .projects a:hover{
@@ -219,7 +240,12 @@ label {
 
 .move-down {
     opacity: 1 !important;
-    bottom: 50px !important;
+    bottom: 75px !important;
+}
+
+.move-down2 {
+    opacity: 1 !important;
+    bottom: 25px !important;
 }
 
 .contact-wrap {
