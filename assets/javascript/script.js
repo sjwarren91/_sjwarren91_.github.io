@@ -281,14 +281,18 @@ function debounce(func, wait, immediate) {
 
 $(".task").hover(function(){
     $(this).children("img").addClass("fade");
+    $(this).children("p").css("opacity", "1");
+    $(this).children(".made-with").css("opacity", "1");
     $(this).children(".section-header").addClass("move-in");
-    $(this).children(".portlink").addClass("move-down");
-    $(this).children(".gitlink").addClass("move-down2");
+    $(this).children(".flex").children(".portlink").addClass("move-down2");
+    $(this).children(".flex").children(".gitlink").addClass("move-down2");
 }, function(){
     $(this).children().removeClass('fade');
+    $(this).children("p").css("opacity", "0");
+    $(this).children(".made-with").css("opacity", "0");
     $(this).children().removeClass('move-in');
-    $(this).children(".portlink").removeClass("move-down");
-    $(this).children(".gitlink").removeClass("move-down2");
+    $(this).children(".flex").children(".portlink").removeClass("move-down2");
+    $(this).children(".flex").children(".gitlink").removeClass("move-down2");
 })
 
 $(document).ready(function(){

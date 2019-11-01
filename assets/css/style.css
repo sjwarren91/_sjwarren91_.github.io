@@ -151,6 +151,11 @@ span#name {
     padding-bottom: 25px;
 }
 
+.fab2 {
+    font-size: 30px;
+    margin: 0px 2px 0px 2px;
+}
+
 .icon-wrap {
     padding: 25px;
 }
@@ -193,20 +198,23 @@ label {
     transition: all 0.4s ease-in-out;
 }
 
-.projects .portlink {
+.projects p {
     position: absolute;
-    bottom: 0px;
+    top: 85px;
     color: #1f2833;
     opacity: 0;
     transition: all 0.4s ease-in-out;
-    text-decoration: none;
-    padding: 5px 20px 5px 20px;
-    border: 2px solid #86c232;
-    border-radius: 5px;
-    font-weight: 400;
+    padding: 0px 10px 0px 10px;
 }
 
-.projects .gitlink {
+.projects .made-with {
+    position: absolute;
+    top: 160px;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.portlink {
     position: absolute;
     bottom: 0px;
     color: #1f2833;
@@ -217,6 +225,21 @@ label {
     border: 2px solid #86c232;
     border-radius: 5px;
     font-weight: 400;
+    left: 100px;
+}
+
+.gitlink {
+    position: absolute;
+    bottom: 0px;
+    color: #1f2833;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    text-decoration: none;
+    padding: 5px 20px 5px 20px;
+    border: 2px solid #86c232;
+    border-radius: 5px;
+    font-weight: 400;
+    right: 100px;
 }
 
 .projects .gitimg {
